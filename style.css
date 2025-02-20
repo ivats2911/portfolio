@@ -1,0 +1,256 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Dark Mode Toggle */
+#darkModeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: inherit; /* Inherit text color from body */
+    padding: 0.5em;
+    transition: color 0.3s ease;
+}
+
+#darkModeToggle .fas {
+    display: inline-block; /* Ensure icons are displayed */
+}
+#darkModeToggle .fa-sun {
+    display: none;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: #eee;
+}
+
+body.dark-mode #darkModeToggle .fa-moon {
+    display: none; /* Hide moon in dark mode */
+}
+
+body.dark-mode #darkModeToggle .fa-sun {
+    display: inline-block; /* Show sun in dark mode */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #e0e0e0;
+    padding: 3em;
+    text-align: center;
+}
+
+#hero img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+#hero .social-links a {
+    color: #333;
+    margin: 0 0.5em;
+    font-size: 1.5em;
+}
+
+/* About Section */
+#about .about-content {
+    margin-bottom: 1.5em;
+}
+
+#about .skills {
+    background-color: #f0f0f0;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+#about .skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#about .skills li {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    background-color: #ddd;
+    border-radius: 3px;
+}
+/* Experience Section */
+
+.experience-entries {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-entry {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.experience-entry h3 {
+    margin-bottom: 0.3em;
+}
+
+.experience-entry h4 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-style: italic;
+    color: #666;
+}
+
+.experience-entry .date {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 0.8em;
+}
+
+.experience-entry ul {
+    padding-left: 20px;
+}
+
+.experience-entry li {
+    margin-bottom: 0.4em;
+}
+
+.experience-entry .technologies {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 0.8em;
+}
+
+/* Projects Section */
+#projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+    background-color: #fff;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.project-card h3 {
+    margin-bottom: 0.5em;
+}
+
+.project-card .project-links a {
+    margin: 0 0.5em;
+    color: #337ab7; /* Standard blue for links */
+    text-decoration: none;
+}
+
+.project-card .project-links a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.7em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#contactForm button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    #projects .project-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
