@@ -1,32 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
-
-    // Load Dark Mode Preference from Local Storage
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        enableDarkMode();
-    }
-
-    // Dark Mode Toggle Functionality
-    darkModeToggle.addEventListener('click', function() {
-        if (body.classList.contains('dark-mode')) {
-            disableDarkMode();
-        } else {
-            enableDarkMode();
-        }
-    });
-
-    function enableDarkMode() {
-        body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled');
-    }
-
-    function disableDarkMode() {
-        body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', null);
-    }
 
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahil Sharma - Portfolio</title>
+    <title>Sahil Sharma - Data & AI Engineer</title>
     <meta name="description" content="Sahil Sharma's Portfolio Website Showcasing Data Science, Machine Learning, and Software Engineering Skills">
     <meta name="keywords" content="data science, machine learning, AI, software engineer, portfolio, Python, AWS, MLOps">
-    <meta property="og:title" content="Sahil Sharma - Portfolio">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sahil Sharma - Data & AI Engineer">
     <meta property="og:description" content="Data Science, Machine Learning, and AI Portfolio by Sahil Sharma">
-    <meta property="og:image" content="URL_TO_YOUR_PROFILE_PICTURE">  <!-- Replace with your image URL -->
     <meta property="og:url" content="https://ivats2911.github.io/portfolio/">
     <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,12 +30,9 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button id="darkModeToggle">
-                <i class="fas fa-moon"></i>  <!-- Moon icon -->
-                <i class="fas fa-sun"></i>   <!-- Sun icon -->
-            </button>
         </nav>
     </header>
 
@@ -50,50 +53,114 @@
         <section id="about">
             <h2>About Me</h2>
             <div class="about-content">
-                <body>
+                <p class="bio">Machine Learning & AI Specialist with expertise in Python, SQL, and MLOps. Skilled in developing scalable ML models, automating workflows, and deploying AI solutions in AWS SageMaker & Azure ML. Passionate about leveraging AI-driven insights to enhance business efficiency while ensuring compliance.</p>
 
-                    <h1>Data/AI/ML Engineer</h1>
-                    <p>Machine Learning & AI Specialist with expertise in Python, SQL, and MLOps, skilled in developing scalable ML models, automating workflows, and deploying AI solutions in AWS SageMaker & Azure ML. Passionate about leveraging Al-driven insights to enhance business efficiency while ensuring compliance with UK GDPR/DPA 2018.</p>
+                <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 2rem;">🚀 What I Bring</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Data-Driven Decisions</h4>
+                        <p>Proficient in SQL, Python, and BI Tools (Tableau, Power BI) to analyse and visualise key business metrics.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-brain"></i>
+                        <h4>AI & ML Expertise</h4>
+                        <p>Developed ML pipelines with AWS SageMaker & Azure ML, achieving high accuracy in predictive modelling.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-server"></i>
+                        <h4>Cloud Solutions</h4>
+                        <p>Experienced in AWS, Azure, and Kubernetes for scalable data-intensive applications.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Software Development</h4>
+                        <p>Skilled in API development (REST, FastAPI, Flask) and full software development lifecycle.</p>
+                    </div>
+                </div>
 
-                    <h2>🚀 What I Bring:</h2>
-                    <ul>
-                        <li><span class="highlight">Data-Driven Decision-Making</span> – Proficient in SQL, Python, and BI Tools (Tableau, Power BI, Looker) to analyse and visualise key business metrics.</li>
-                        <li><span class="highlight">AI & Machine Learning Expertise</span> – Developed ML pipelines with AWS SageMaker & Azure ML, achieving up to 88% accuracy in predictive modelling.</li>
-                        <li><span class="highlight">Cloud & Big Data Solutions</span> – Experienced in AWS, Azure, and Kubernetes for scalable data-intensive applications.</li>
-                        <li><span class="highlight">End-to-end Software Development</span> – Skilled in API development (REST, FastAPI, Flask) and full software development lifecycle.</li>
-                        <li><span class="highlight">Data Pipeline Development</span> – Experienced in ETL processes and tools such as Apache Airflow, Snowflake, Kafka.</li>
-
-                    </ul>
-
-                    <h2>🔍 Key Achievements:</h2>
-                    <ul>
-                        <li><span class="highlight">AI-Driven Research</span> – Compared ChatGPT-4 vs. ChatGPT-3 for lab automation, improving efficiency by up to 100% in specific cases.</li>
-                        <li><span class="highlight">Cloud ML Deployment</span> – Designed a real-time prediction model with AWS SageMaker, reducing deployment time by 40%.</li>
-                        <li><span class="highlight">Model Monitoring & CI/CD</span> – Used tools such as MLflow, Kubeflow, Airflow, GitHub Actions for Model Monitoring and CI/CD.</li>
-                    </ul>
-
-                </body>
+                <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 2rem;">🔍 Key Achievements</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-flask"></i></div>
+                        <div class="achievement-text">
+                            <h4>AI Research</h4>
+                            <p>Improved efficiency by 100% using LLMs for lab automation.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="achievement-text">
+                            <h4>Fast Deployment</h4>
+                            <p>Reduced model deployment time by 40% with SageMaker.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-tools"></i></div>
+                        <div class="achievement-text">
+                            <h4>CI/CD Pipelines</h4>
+                            <p>Implemented robust monitoring with MLflow & GitHub Actions.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="skills">
-                <h3>Skills</h3>
-                <ul>
-                    <li>Python (Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow)</li>
-                    <li>SQL (PostgreSQL, MySQL, BigQuery, Snowflake)</li>
-                    <li>Data Structures & Algorithms</li>
-                    <li>Machine Learning (Supervised & Unsupervised Learning)</li>
-                    <li>Deep Learning (CNNs, RNNs, LSTMs, Transformers)</li>
-                    <li>LLMs & Generative AI (OpenAI API, GPT-based models)</li>
-                    <li>Cloud Computing (AWS, Azure, Google Cloud AI)</li>
-                    <li>Containerization (Docker, Kubernetes, Terraform)</li>
-                    <li>BI Tools (Tableau, Power BI, Looker)</li>
-                    <li>Data Pipeline Development (ETL, Apache Airflow, Snowflake, Kafka)</li>
-                    <li>A/B Testing & Experimentation</li>
-                    <li>API Development (REST, FastAPI, Flask)</li>
-                    <li>Version Control & Collaboration (Git, GitHub, Bitbucket)</li>
-                    <li>Model Deployment (AWS SageMaker, Azure ML, TensorFlow Serving)</li>
-                    <li>Model Monitoring & CI/CD (MLflow, Kubeflow, Airflow, GitHub Actions)</li>
+            <div class="skills-grid">
+                <!-- AI & Machine Learning -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI & ML</h3>
+                    <ul>
+                        <li>Machine Learning</li>
+                        <li>Deep Learning</li>
+                        <li>Generative AI</li>
+                        <li>LLMs & GPT Models</li>
+                        <li>PyTorch</li>
+                        <li>TensorFlow</li>
+                        <li>Scikit-learn</li>
+                        <li>Computer Vision</li>
+                    </ul>
+                </div>
 
-                </ul>
+                <!-- Cloud & MLOps -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & MLOps</h3>
+                    <ul>
+                        <li>AWS SageMaker</li>
+                        <li>Azure ML</li>
+                        <li>Google Cloud AI</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>Terraform</li>
+                        <li>MLflow & Kubeflow</li>
+                        <li>CI/CD (GitHub Actions)</li>
+                    </ul>
+                </div>
+
+                <!-- Data Engineering -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Data Engineering</h3>
+                    <ul>
+                        <li>SQL (PostgreSQL, MySQL)</li>
+                        <li>Snowflake</li>
+                        <li>BigQuery</li>
+                        <li>Apache Airflow</li>
+                        <li>Kafka</li>
+                        <li>ETL Pipelines</li>
+                        <li>Tableau & Power BI</li>
+                    </ul>
+                </div>
+
+                <!-- Languages & Web -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages & Web</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>FastAPI & Flask</li>
+                        <li>REST APIs</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>Git & GitHub</li>
+                        <li>A/B Testing</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -128,49 +195,74 @@
         <section id="projects">
             <h2>Projects</h2>
             <div class="project-grid">
+                <!-- Project 1 -->
                 <div class="project-card">
-                    <figure class="project-card__image-container">
-                        <img class="project-card__image" src="project1.png" alt="Screenshot of Large Language Model project">
-                        <figcaption class="project-card__title">Large Language Model (LLM) for generating protocol scripts</figcaption>
-                    </figure>
-                    <p class="project-card__description">Generated Python protocol scripts with the help of OpenAI API comparing multiple large language models while visualising the success/failure rate in tabular and graph form from the dataset.  Compared the efficiency of ChatGPT 4 vs ChatGPT 3. Accelerated script generation by streamlining processes.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/ivats2911/LLM-Protocol-Script-Generator-automated-for-bio-labs" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <!-- <a href="#" target="_blank"><i class="fas fa-link"></i> Live Demo</a> -->
-                    </div>
-                </div>
-                <div class="project-card">
-                    <figure class="project-card__image-container">
-                        <img class="project-card__image" src="project2.png" alt="Screenshot of Mobile Price Classification project">
-                        <figcaption class="project-card__title">Mobile Price Classification using AWS Sagemaker</figcaption>
-                    </figure>
-                    <p class="project-card__description">Engineered a machine learning pipeline with AWS SageMaker to automate data preparation, model training, and deployment for a dataset of 2,000 rows, achieving 88% accuracy with a Random ForestClassifier. Reduced deployment time by 40%.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/ivats2911/awsmobileprice" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <!-- <a href="#" target="_blank"><i class="fas fa-link"></i> Live Demo</a> -->
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-file-invoice"></i> <!-- Or a more relevant icon -->
-                    </div>
-                    <div class="project-content">
-                        <h3>Multilanguage Invoice Extractor</h3>
-                        <div class="project-tech">
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Google Gemini API</span>
-                            <span class="tech-tag">PIL</span>
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <img src="project1.png" alt="LLM Project">
+                            <h3>LLM Protocol Generator</h3>
                         </div>
-                        <p>A Streamlit application designed to analyze invoices in multiple languages using Google's Gemini API. Processes uploaded invoice images and answers questions based on the extracted content.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/ivats2911/multilanguage-invoice-extractor" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <!--  Add a demo link if you have one -->
-                            <!-- <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a> -->
+                        <div class="project-card-back">
+                            <h3>LLM Protocol Script Generator</h3>
+                            <p>Generated Python protocol scripts with OpenAI API comparing multiple models (GPT-3 vs GPT-4). Visualized success rates and improved lab automation efficiency by up to 100%.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenAI API</span>
+                                <span class="tech-tag">Data Viz</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ivats2911/LLM-Protocol-Script-Generator-automated-for-bio-labs" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Add more project cards as needed -->
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <img src="project2.png" alt="AWS Mobile Price">
+                            <h3>AWS Mobile Price Classification</h3>
+                        </div>
+                        <div class="project-card-back">
+                            <h3>AWS Mobile Price Classification</h3>
+                            <p>Engineered a machine learning pipeline with AWS SageMaker to automate data preparation, training, and deployment. Achieved 88% accuracy with Random Forest and reduced deployment time by 40%.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">AWS SageMaker</span>
+                                <span class="tech-tag">Random Forest</span>
+                                <span class="tech-tag">MLOps</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ivats2911/awsmobileprice" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <!-- Visual placeholder since no image led to icon previously -->
+                            <div style="font-size: 4rem; color: var(--primary); margin-bottom: 1rem;">
+                                <i class="fas fa-file-invoice"></i>
+                            </div>
+                            <h3>Invoice Extractor</h3>
+                        </div>
+                        <div class="project-card-back">
+                            <h3>Multilanguage Invoice Extractor</h3>
+                            <p>A Streamlit application designed to analyze invoices in multiple languages using Google's Gemini API. Processes uploaded invoice images and answers questions based on extracted content.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Gemini API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ivats2911/multilanguage-invoice-extractor" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
