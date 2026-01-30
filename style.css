@@ -1,28 +1,29 @@
 /* 
-   Portfolio Premium Design System 
-   Theme: Data/AI Dark Aesthetics
-   Fonts: Outfit (Headers), Inter (Body)
+   Portfolio Vibrant Editorial Design System 
+   Theme: vibrant Blue & Editorial Typography
+   Fonts: Playfair Display (Headers), Inter (Body)
 */
 
 :root {
     /* Color Palette */
-    --bg-dark: #0f172a;
-    --bg-card: rgba(30, 41, 59, 0.7);
-    --bg-card-hover: rgba(51, 65, 85, 0.8);
-    --primary: #3b82f6;
-    --accent: #8b5cf6;
-    --text-main: #f8fafc;
+    /* Color Palette */
+    --bg-dark: #13131F; /* Deep Navy/Black background */
+    --bg-card: #1C1C2E; /* Slightly lighter card background */
+    --bg-card-hover: #25253A;
+    --primary: #a78bfa; /* Soft Purple accent */
+    --accent: #8b5cf6; /* Deeper Purple */
+    --text-main: #ffffff;
     --text-muted: #94a3b8;
-    --border-light: rgba(255, 255, 255, 0.1);
+    --border-light: rgba(255, 255, 255, 0.05);
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-    --gradient-glow: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    --gradient-primary: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); /* Purple gradient */
+    --gradient-glow: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
 
     /* Spacing & Layout */
     --container-width: 1200px;
     --header-height: 80px;
-    --radius-lg: 16px;
+    --radius-lg: 16px; /* Clean rounded corners, not too round */
     --radius-md: 8px;
     
     /* Transitions */
@@ -45,19 +46,16 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-main);
-    line-height: 1.7;
+    line-height: 1.6;
     overflow-x: hidden;
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
     min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Playfair Display', serif; /* Elegant Serif */
     color: var(--text-main);
-    font-weight: 700;
-    line-height: 1.2;
+    font-weight: 400; /* Often lighter in editorial */
+    line-height: 1.1;
 }
 
 a {
@@ -76,15 +74,19 @@ img {
 }
 
 /* Reusable Components */
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    background: var(--gradient-primary);
+.section-title, section h2 {
+    font-size: 3.5rem;
+    font-weight: 700; /* Bolder as per image */
+    margin-bottom: 2.5rem; /* Slightly tighter */
+    text-align: left;
+    background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); /* Purple Gradient */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
+    display: inline-block; /* Needed for gradient text to size correctly */
+    width: auto; /* Let it wrap content */
+    border: none; /* Remove border to match clean image */
+    padding-bottom: 0;
 }
 
 .container {
@@ -113,7 +115,7 @@ img {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); /* Purple Glow */
     color: white;
 }
 
@@ -126,8 +128,8 @@ header {
     height: var(--header-height);
     z-index: 1000;
     backdrop-filter: blur(12px);
-    background: rgba(15, 23, 42, 0.8); /* Semi-transparent background */
-    border-bottom: 1px solid var(--border-light);
+    background: transparent; /* Seamless header */
+    border-bottom: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,63 +180,105 @@ nav a:hover::after {
 /* Hero Section */
 #hero {
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding-top: var(--header-height);
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    padding-bottom: 4rem;
 }
 
 .hero-content {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 2rem;
-    text-align: center;
-    z-index: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 2rem;
+}
+
+/* Massive Title */
+.hero-headline {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.hero-headline h1 {
+    font-size: clamp(4rem, 15vw, 11rem); /* Responsive huge text */
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* 2-Column Grid for Images */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.hero-image-card {
+    position: relative;
+    aspect-ratio: 4/3; /* Standard photography aspect ratio */
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background-color: var(--bg-card); /* Solid Clean Dark */
+    border: 1px solid var(--border-light);
+}
+
+.hero-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.hero-image-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Bottom Actions Row */
+.hero-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2rem;
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 
-#hero h1 {
-    font-size: 4rem;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
-}
-
-#hero p {
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
+.hero-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
     max-width: 600px;
 }
 
-#hero img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid rgba(59, 130, 246, 0.3);
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
-    margin-bottom: 2rem;
-}
-
-.social-links {
+.hero-actions {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 1rem;
+    gap: 1rem;
+    align-items: center;
 }
 
-.social-links a {
-    font-size: 1.8rem;
-    color: var(--text-muted);
+/* New Button Style for Editorial */
+.btn-editorial {
+    padding: 0.8rem 2rem;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    background: transparent;
 }
 
-.social-links a:hover {
-    color: var(--primary);
-    transform: translateY(-3px);
+.btn-editorial:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
 }
 
 /* Sections General */
@@ -285,7 +329,6 @@ section {
     border: 1px solid var(--border-light);
     border-radius: var(--radius-lg);
     padding: 1.5rem;
-    backdrop-filter: blur(10px);
     transition: var(--transition-fast);
 }
 
@@ -302,7 +345,7 @@ section {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 2px solid rgba(255,255,255,0.05); /* Proper dark border */
     padding-bottom: 0.5rem;
 }
 
@@ -349,9 +392,14 @@ section {
     border: 1px solid var(--border-light);
     border-radius: var(--radius-lg);
     padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
+    border-left: 4px solid var(--primary); /* Minimal Accent Bar */
 }
 
 .experience-entry:hover {
@@ -451,6 +499,7 @@ section {
     align-items: center;
     padding: 2rem;
     border: 1px solid var(--border-light);
+    background: var(--bg-card); /* Solid Dark */
 }
 
 /* Front Styling */
@@ -474,8 +523,8 @@ section {
 
 /* Back Styling */
 .project-card-back {
-    background: var(--gradient-primary); /* Use gradient for back to pop */
-    color: white;
+    background: #2D2D44; /* Slightly lighter than card for contrast */
+    color: white; /* Revert to white text for dark card */
     transform: rotateY(180deg);
     text-align: left;
     align-items: flex-start; /* Align text to start */
@@ -494,7 +543,8 @@ section {
 .project-card-back h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid rgba(255,255,255,0.3);
+    color: var(--primary); /* Accent Color */
+    border-bottom: 2px solid rgba(255,255,255,0.1);
     padding-bottom: 0.5rem;
     width: 100%;
 }
@@ -510,14 +560,14 @@ section {
 }
 
 .project-card-back .tech-tag {
-    background: rgba(255,255,255,0.2);
-    color: white;
-    font-weight: 500;
+    background: rgba(255,255,255,0.05);
+    color: var(--text-muted);
+    font-weight: 600;
 }
 
 .project-card-back .project-links a {
     color: white;
-    background: rgba(0,0,0,0.3);
+    background: var(--primary); /* Purple Button */
     padding: 0.5rem 1rem;
     border-radius: 20px;
     margin-right: 0.5rem;
@@ -527,7 +577,8 @@ section {
 
 .project-card-back .project-links a:hover {
     background: white;
-    color: var(--accent);
+    color: var(--bg-dark);
+    border: 1px solid white;
 }
 
 /* Contact Section */
@@ -573,7 +624,7 @@ section {
 }
 
 #contactForm button {
-    background: var(--gradient-primary);
+    background: var(--primary); /* Solid Purple */
     color: white;
     padding: 1rem 3rem;
     border: none;
@@ -615,6 +666,7 @@ footer {
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
+    border-left: 4px solid var(--primary); /* Accent Bar */
 }
 
 .education-item:hover {

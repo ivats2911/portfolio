@@ -16,7 +16,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -39,16 +39,30 @@
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h1>Hi, I'm Sahil Sharma</h1>
-                <p>Data/AI/ML Engineer</p>
-                <a href="resume.pdf" class="btn-primary" target="_blank" download>
-                    Download Resume <i class="fas fa-download"></i>
-                </a>
-                <img src="images/profile.JPG" alt="Sahil Sharma - Data/AI/ML Engineer">  <!-- Replace profile.jpg with your image -->
-                <div class="social-links">
-                    <a href="https://github.com/ivats2911" target="_blank"><i class="fab fa-github"></i></a>  <!-- Replace with your GitHub URL -->
-                    <a href="https://www.linkedin.com/in/sahilvats2911/" target="_blank"><i class="fab fa-linkedin"></i></a> <!-- Replace with your LinkedIn URL -->
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a> <!-- Replace with your Twitter URL if you have one -->
+                <div class="hero-headline">
+                    <h1>Hi, I'm Sahil</h1>
+                </div>
+                
+                <div class="hero-grid">
+                    <div class="hero-image-card">
+                        <!-- Using profile.JPG for both slots for now, or a placeholder for the second -->
+                        <img src="images/profile.JPG" alt="Sahil Sharma Portrait">
+                    </div>
+                    <div class="hero-image-card">
+                         <!-- Ideally a 'working at desk' shot. Using profile.JPG again or a color block -->
+                        <img src="images/profile.JPG" alt="Sahil Working" style="filter: grayscale(100%); opacity: 0.8;"> 
+                    </div>
+                </div>
+
+                <div class="hero-footer">
+                    <div class="hero-tagline">
+                        I bring ideas to life
+                    </div>
+                    <div class="hero-actions">
+                         <a href="#projects" class="btn-editorial">Explore my work</a>
+                         <!-- Socials can go here or in footer, let's keep them handy -->
+                         <a href="https://github.com/ivats2911" target="_blank" style="color: white; font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -58,7 +72,7 @@
             <div class="about-content">
                 <p class="bio">Machine Learning & AI Specialist with expertise in Python, SQL, and MLOps. Skilled in developing scalable ML models, automating workflows, and deploying AI solutions in AWS SageMaker & Azure ML. Passionate about leveraging AI-driven insights to enhance business efficiency while ensuring compliance.</p>
 
-                <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 2rem;">🚀 What I Bring</h3>
+                <h3 class="section-title" style="font-size: 2rem; border: none; margin-top: 2rem;">🚀 What I Bring</h3>
                 <div class="features-grid">
                     <div class="feature-card">
                         <i class="fas fa-chart-line"></i>
@@ -82,7 +96,7 @@
                     </div>
                 </div>
 
-                <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 2rem;">🔍 Key Achievements</h3>
+                <h3 class="section-title" style="font-size: 2rem; border: none; margin-top: 2rem;">🔍 Key Achievements</h3>
                 <div class="achievements-grid">
                     <div class="achievement-card">
                         <div class="achievement-icon"><i class="fas fa-flask"></i></div>
