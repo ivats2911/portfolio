@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahil Sharma — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #6d28d9;
+      --purple-light: #ede9fe;
+      --text: #111118;
+      --muted: #52525b;
+      --dim: #a1a1aa;
+      --border: #e4e4e7;
+      --bg: #ffffff;
+      --bg2: #fafafa;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f0eff4;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      padding: 32px 16px;
+    }
+
+    .page {
+      background: var(--bg);
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 52px 56px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+      border-radius: 4px;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--text);
+      margin-bottom: 24px;
+    }
+    .header-left h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .header-left .title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--purple);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-family: 'DM Mono', monospace;
+    }
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+    .contact-item {
+      font-size: 12px;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .contact-item a {
+      color: var(--purple);
+      text-decoration: none;
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 22px;
+    }
+    .section-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 10px;
+      font-family: 'DM Mono', monospace;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Summary ── */
+    .summary p {
+      font-size: 13px;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    /* ── Expertise chips ── */
+    .expertise {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .chip {
+      font-size: 11px;
+      font-family: 'DM Mono', monospace;
+      padding: 3px 9px;
+      border-radius: 3px;
+      background: var(--purple-light);
+      color: var(--purple);
+      font-weight: 500;
+    }
+
+    /* ── Experience & Projects ── */
+    .entry {
+      margin-bottom: 16px;
+    }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 3px;
+      flex-wrap: wrap;
+    }
+    .entry-role {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .entry-period {
+      font-size: 11px;
+      font-family: 'DM Mono', monospace;
+      color: var(--dim);
+      white-space: nowrap;
+    }
+    .entry-company {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--purple);
+      margin-bottom: 5px;
+    }
+    .entry-tech {
+      font-size: 11px;
+      font-family: 'DM Mono', monospace;
+      color: var(--dim);
+      margin-bottom: 6px;
+    }
+    .entry-tech span {
+      color: var(--muted);
+    }
+    ul.bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    ul.bullets li {
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    ul.bullets li::before {
+      content: '–';
+      color: var(--purple);
+      flex-shrink: 0;
+      margin-top: 0;
+      font-weight: 700;
+    }
+
+    /* ── Education ── */
+    .edu-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .edu-degree {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .edu-school {
+      font-size: 12px;
+      color: var(--purple);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .edu-detail {
+      font-size: 12px;
+      color: var(--dim);
+      margin-top: 2px;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 32px;
+    }
+    .skill-row {
+      display: flex;
+      gap: 6px;
+      align-items: baseline;
+    }
+    .skill-label {
+      font-size: 11px;
+      font-family: 'DM Mono', monospace;
+      color: var(--text);
+      font-weight: 600;
+      white-space: nowrap;
+      min-width: 110px;
+    }
+    .skill-val {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; border-radius: 0; padding: 36px 44px; max-width: 100%; }
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Sahil Sharma</h1>
+      <div class="title">Applied AI Engineer · 2+ Years Experience</div>
+    </div>
+    <div class="header-right">
+      <div class="contact-item">Gurugram, India · +91-9872575024</div>
+      <div class="contact-item"><a href="mailto:sahilvats2911@gmail.com">sahilvats2911@gmail.com</a></div>
+      <div class="contact-item"><a href="https://www.linkedin.com/in/sahil-s29/" target="_blank">linkedin.com/in/sahil-s29</a></div>
+      <div class="contact-item"><a href="https://github.com/ivats2911" target="_blank">github.com/ivats2911</a></div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section summary">
+    <div class="section-title">Professional Summary</div>
+    <p>Applied AI Engineer with 2+ years of commercial experience including London-based roles, and an MSc grounding in advanced computer science. Track record of architecting production-grade ML and LLM systems on large-scale data — including automating a 24-hour scientific workflow to under 15 minutes — with strong ownership of the end-to-end model lifecycle across AWS/Azure. Comfortable translating complex business problems into structured analytical solutions for stakeholders.</p>
+  </div>
+
+  <!-- CORE EXPERTISE -->
+  <div class="section">
+    <div class="section-title">Core Expertise</div>
+    <div class="expertise">
+      <span class="chip">Generative AI & LLM Systems</span>
+      <span class="chip">End-to-End ML Pipeline Development</span>
+      <span class="chip">Operations Research & Optimisation</span>
+      <span class="chip">Model Deployment & MLOps</span>
+      <span class="chip">NLP & Semantic Retrieval</span>
+      <span class="chip">Performance Optimisation</span>
+      <span class="chip">AWS / Azure</span>
+      <span class="chip">Data Quality & Governance</span>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-role">AI Engineer</span>
+        <span class="entry-period">March 2025 – November 2025</span>
+      </div>
+      <div class="entry-company">Orynx AI · London, UK (On-site)</div>
+      <div class="entry-tech"><span>Tech:</span> LLM Fine-tuning, Stable Diffusion, LoRA/ControlNet, Prompt Engineering, Data Quality, SQL</div>
+      <ul class="bullets">
+        <li>Engineered a parameter-efficient Stable Diffusion pipeline (LoRA + ControlNet) that improved character consistency by 40% and achieved 85% visual consistency through bespoke controllability techniques.</li>
+        <li>Optimised production model workflows to reduce inference latency by 25%, enabling faster real-time generation.</li>
+        <li>Built data quality pipelines aligned with privacy standards, cutting artefact generation by 30% and reducing training compute by 20% via advanced preprocessing.</li>
+        <li>Worked with millions of rows of production data, writing complex SQL (joins, CTEs, window functions) for extraction, validation, and feature pipelines.</li>
+        <li>Owned full model lifecycles from prototyping to deployment, delivering production-ready generative systems.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-role">Data Analyst Intern</span>
+        <span class="entry-period">August 2024 – October 2024</span>
+      </div>
+      <div class="entry-company">Onpoint Consulting · London, UK (Hybrid)</div>
+      <div class="entry-tech"><span>Tech:</span> Costperform, Tableau, Cost & Spend Analysis, Stakeholder Reporting</div>
+      <ul class="bullets">
+        <li>Owned end-to-end delivery of cost analysis workstreams across multi-source datasets, surfacing cost drivers that unlocked £35K in annual savings.</li>
+        <li>Built executive Tableau dashboards adopted across five departments, driving consistent use among 25+ stakeholders for leadership decision-making.</li>
+        <li>Streamlined recurring reporting workflows through automation, compressing reporting timelines by 30%.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-role">Software Developer</span>
+        <span class="entry-period">May 2021 – June 2022</span>
+      </div>
+      <div class="entry-company">Freelance · Gurgaon, India</div>
+      <div class="entry-tech"><span>Tech:</span> Python, SQL, Google Firestore, Flutter, Dart</div>
+      <ul class="bullets">
+        <li>Built scalable analytics across three Android applications supporting 8,000+ MAU; uncovered behavioural patterns across 12,000+ geolocation datapoints to inform product direction.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-role">LLM Protocol Script Generator</span>
+      </div>
+      <div class="entry-tech"><span>Tech:</span> Python, LLM APIs, Agent Workflows, Prompt Engineering, Statistical Testing</div>
+      <ul class="bullets">
+        <li>Built an agent-driven AI workflow that shrank protocol creation time from 24 hours to under 15 minutes, with up to 100% efficiency gains across 250+ benchmarked test cases.</li>
+        <li>Designed an evaluation framework with eight performance indicators to guide deployment decisions, with structured prompt pipelines for reasoning reliability.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-role">Mobile Price Classification on AWS SageMaker</span>
+      </div>
+      <div class="entry-tech"><span>Tech:</span> AWS SageMaker, Python, scikit-learn, boto3, pandas</div>
+      <ul class="bullets">
+        <li>Developed an end-to-end ML pipeline reaching 88% accuracy and lifting F1 from 0.76 to 0.87 via targeted feature engineering; identified seven primary pricing drivers.</li>
+        <li>Deployed a low-latency API (~200ms) at 99.5% uptime under concurrent load, with stakeholder-facing dashboards explaining model assumptions.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div>
+        <div class="edu-entry">
+          <div>
+            <div class="edu-degree">MSc, Advanced Computer Science</div>
+            <div class="edu-school">Newcastle University, UK</div>
+          </div>
+          <span class="entry-period">September 2022 – September 2023</span>
+        </div>
+        <div class="edu-detail">Operations Research & Optimisation, Machine Learning, AI / Deep Learning / NLP</div>
+      </div>
+      <div>
+        <div class="edu-entry">
+          <div>
+            <div class="edu-degree">BEng, Computer Science</div>
+            <div class="edu-school">Chandigarh University, India</div>
+          </div>
+          <span class="entry-period">August 2016 – January 2021</span>
+        </div>
+        <div class="edu-detail">Data Structures, Machine Learning, Java, Python, Operating Systems, Database Systems</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">Languages</span>
+        <span class="skill-val">Python · SQL (CTEs, window fns) · TypeScript / JS</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Machine Learning</span>
+        <span class="skill-val">PyTorch · TensorFlow · Scikit-learn · NLP · Feature Engineering</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">GenAI & LLM</span>
+        <span class="skill-val">LangChain · Hugging Face · OpenAI API · RAG · Embeddings</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Analytics & OR</span>
+        <span class="skill-val">Operations Research · Statistical Modelling · Experimentation</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Cloud & Infra</span>
+        <span class="skill-val">AWS (SageMaker, Lambda, S3) · Azure ML · Docker · PostgreSQL</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Tools</span>
+        <span class="skill-val">MLflow · Apache Airflow · Tableau · GitHub Actions · Terraform</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
